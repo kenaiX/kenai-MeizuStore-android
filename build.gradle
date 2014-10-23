@@ -18,12 +18,20 @@ android {
         versionCode 1
         versionName "1.0.0"
     }
-    productFlavors {
-    }
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 }
 
-
+apply plugin: 'maven'
+uploadArchives {
+    repositories.mavenDeployer {
+        name = 'meizustore'
+        repository(url: "file:////Users/kenai/Desktop")
+        pom.version = "0.1.0"
+        pom.artifactId = "kenai"
+        pom.groupId = "cc.kenai.meizustore"
+        pom.packaging = 'aar'
+    }
+}
