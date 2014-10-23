@@ -1,0 +1,2 @@
+kenai-MeizuStore-android
+========================
